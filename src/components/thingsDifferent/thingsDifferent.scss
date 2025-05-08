@@ -1,0 +1,97 @@
+@import "../../styles/theme";
+@import "../../styles/main.scss";
+
+.things-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  width: 100%;
+
+  .image-section {
+    flex: 1;
+    padding-left: 55px;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+    }
+  }
+
+  .content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 50px;
+
+    .premium {
+      background-image: linear-gradient(to bottom right, $primary, $secondary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .main-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #262c40;
+      line-height: 1.1;
+
+      .true-value {
+        background-image: linear-gradient(to bottom right, $secondary, #b14de6);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      
+        display: inline-block; // enforce tighter layout
+      }
+    }
+
+    .subheading {
+      font-size: 1rem;
+      color: #555;
+      max-width: 600px;
+      margin-top: 10px;
+    }
+
+    .bullet-points {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px;
+
+      .bullet-item {
+        .bullet-title {
+          display: flex;
+          align-items: center;
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #262c40;
+
+          .bullet-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+            background-image: linear-gradient(to bottom right, $secondary, #b14de6);
+          }
+        }
+
+        .bullet-description {
+          margin-top: 0.5rem;
+          font-size: 0.95rem;
+          color: #56648f;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

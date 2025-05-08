@@ -1,0 +1,120 @@
+@import "../../../styles/theme";
+@import "../../../styles/main.scss";
+
+
+.trusted-experts-section {
+    padding: 4rem 0;
+    background-color: white;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+  
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  
+    .text-content {
+      order: 2;
+  
+      @media (min-width: 768px) {
+        order: 1;
+      }
+  
+      .heading-wrapper {
+        max-width: 700px;
+      
+        span {
+          color: #262c40;
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 1.1; // control overall line spacing
+      
+          .true-value {
+            background-image: linear-gradient(to bottom right, $secondary, #b14de6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            margin-left: 6px;
+            display: inline-block; // enforce tighter layout
+          }
+        }
+      }
+  
+      .section-paragraph {
+        color: #6b7280;
+        margin-bottom: 1rem;
+      }
+  
+      .button-wrapper {
+        margin-top: 2rem;
+      }
+    }
+  
+    .image-wrapper {
+      position: relative;
+      order: 1;
+  
+      @media (min-width: 768px) {
+        order: 2;
+      }
+  
+      .image-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(177, 77, 230, 0.2), rgba(221, 175, 255, 0.2));
+        border-radius: 1rem;
+        filter: blur(40px);
+        opacity: 0.7;
+        z-index: 1;
+      }
+  
+      .image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+  
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+
+
+  .custom-outline-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 200px; 
+    background-color: transparent;
+
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: linear-gradient(to right, $secondary, #af4de7);
+  
+   
+  }
+  
+  }
+  

@@ -1,0 +1,39 @@
+@import './theme';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+// Add other global styles and components below
+
+body {
+  background-color: $background;
+  color: $foreground;
+  font-family: 'Poppins', sans-serif;
+}
+
+button.primary {
+  background: $button-gradient;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: $shadow;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
+}
+
+.card {
+  background: $card-bg;
+  backdrop-filter: $card-blur;
+  border: 1px solid $border-color;
+  box-shadow: $shadow;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    background: $card-hover-gradient;
+    box-shadow: $shadow-hover;
+  }
+
+  
+
+}

@@ -1,0 +1,153 @@
+@import "../../styles/theme";
+@import "../../styles/main.scss";
+
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  padding: 5rem 0;
+  background: #fff;
+  width: 100%;
+
+  .container {
+    
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .services-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+    width: 100%;
+  }
+
+  .service-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 350px;
+    height: 300px;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 0.1px solid #dbbef9;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    animation: fade-in 0.5s ease forwards;
+    opacity: 0;
+
+    /* Remove border */
+  
+  
+    /* Add light shadow with the primary color */
+   
+  
+    &:hover {
+      transform: translateY(-10px) translateZ(20px); /* Move the card out towards the viewer on Z-axis */
+      
+      /* Increase the shadow to create a 3D "coming out" effect */
+      box-shadow: 0 6px 8px rgba(155, 93, 229, 0.4); /* Stronger shadow with more blur */
+    }
+
+    .icon-wrapper {
+     display: flex;
+     object-fit: contain;
+
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      flex-grow: 1;
+      color: #6b7280;
+      margin-bottom: 1rem;
+      font-size: 14px;
+    }
+
+    .learn-more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 500;
+      color: #9B5DE5;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #7768E5;
+      }
+
+      .arrow-icon {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .gem-icon {
+    &.gem-purple {
+      color: #9B5DE5;
+    }
+    &.diamond-purple {
+      color: #7768E5;
+    }
+    &.accent-purple {
+      color: #B469FF;
+    }
+  }
+
+  .custom-outline-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+  
+    background-color: transparent;
+
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: linear-gradient(to right, $secondary, #af4de7);
+  
+   
+  }
+
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+}

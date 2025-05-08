@@ -1,0 +1,98 @@
+@import "../../styles/main.scss" ;
+@import "../../styles/theme" ;
+
+.banner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(to right, #fcfcff, #ebe9fe);
+  
+    padding: 20px; // optional, spacing
+
+
+.banner-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 0px;
+    padding-left: 80px;
+
+            .premium{
+                background-image: linear-gradient(to bottom right, $primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+        display: inline-block;
+        letter-spacing: 2px;
+        font-size: 14px;
+
+
+            }
+
+            .heading-wrapper {
+                max-width: 700px;
+              
+                span {
+                  color: #262c40;
+                  font-size: 60px;
+                  font-weight: 600;
+                  line-height: 1.1; // control overall line spacing
+              
+                  .true-value {
+                    background-image: linear-gradient(to bottom right, $secondary, #b14de6);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                    margin-left: 6px;
+                    display: inline-block; // enforce tighter layout
+                  }
+                }
+              }
+              
+
+        p{
+           color: #56648f;
+           font-size: 18px;
+           max-width: 520px;
+        }
+
+        .custom-outline-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+          
+            background-color: transparent;
+       
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background: linear-gradient(to right, $secondary, #af4de7);
+          
+           
+          }
+
+}
+
+.banner-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: contain;
+
+}
+
+
+  }
+  

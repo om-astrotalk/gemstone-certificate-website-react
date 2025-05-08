@@ -1,0 +1,127 @@
+@import "../../styles/theme";
+@import "../../styles/main.scss";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.gemstone-wrapper {
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  .premium {
+    background-image: linear-gradient(to bottom right, $primary, $secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    
+  }
+
+  .main-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #262c40;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 99%;
+
+    .true-value {
+      background-image: linear-gradient(to bottom right, $secondary, #b14de6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+  }
+
+  .gemstone-carousel {
+      max-width: 99%;
+    .slick-slide {
+      padding: 20px 10px;
+      box-sizing: border-box;
+    }
+
+    .slick-dots {
+        bottom: -30px;
+      
+        li {
+          button {
+            &::before {
+              font-size: 10px;
+              color: #ccc; // default inactive color
+              opacity: 1;
+            }
+          }
+      
+          &.slick-active button::before {
+            color: transparent;
+            background: linear-gradient(to bottom right, $secondary, #b14de6);
+            -webkit-background-clip: text;
+            background-clip: text;
+          }
+        }
+      }
+  }
+
+  .gemstone-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: start !important;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 300px !important;
+    height: 450px;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .gemstone-img {
+      width: 150px;
+      
+      object-fit: contain;
+      
+    }
+
+    .gemstone-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      
+    }
+
+    .gemstone-desc {
+      font-size: 14px;
+      color: #56648f;
+      margin-bottom: 1rem;
+    }
+
+    .learn-more-btn {
+      background: $primary;
+      border: 1px solid $primary;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $primary;
+        color: #fff;
+      }
+    }
+  }
+}

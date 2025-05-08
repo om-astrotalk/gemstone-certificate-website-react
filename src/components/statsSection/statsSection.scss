@@ -1,0 +1,71 @@
+@import '../../styles/main.scss'; // optional if you have color vars like $primary
+@import '../../styles/theme'; // optional if you have color vars like $primary
+
+.stats-section {
+  padding: 4rem 1rem;
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .stats-box {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    width: 1200px;
+  }
+
+  .stats-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+   
+    gap: 4rem;
+    background: linear-gradient(to right, $primary, $secondary);
+    padding: 2rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+    color: #fff;
+    animation: fadeInUp 0.6s ease forwards;
+
+    .icon {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      font-weight: 500;
+      opacity: 0.8;
+      text-transform: uppercase;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

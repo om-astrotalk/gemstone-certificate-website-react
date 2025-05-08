@@ -1,0 +1,22 @@
+// Color Palette
+$primary: #9B5DE5;
+$secondary: #7768E5;
+$accent: #B469FF;
+
+$background: hsl(220, 100%, 99%);
+$foreground: hsl(225, 25%, 20%);
+
+$border-color: hsl(225, 25%, 90%);
+$muted-text: hsl(225, 25%, 45%);
+
+// Gradients
+$primary-gradient: linear-gradient(to right, $primary, $secondary);
+$button-gradient: linear-gradient(to right, $primary, $secondary);
+$hero-bg-gradient: linear-gradient(to bottom right, #ffffff, rgba($accent, 0.3), rgba($primary, 0.1));
+$card-hover-gradient: linear-gradient(to bottom right, #f3e7ff, #f0f2ff);
+
+// Other
+$card-bg: rgba(255, 255, 255, 0.7);
+$card-blur: blur(10px);
+$shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 20px 25px rgba(0, 0, 0, 0.15);
