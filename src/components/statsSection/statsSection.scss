@@ -4,6 +4,7 @@
 .stats-section {
   padding: 4rem 1rem;
 
+
   .container {
     width: 100%;
     margin: 0 auto;
@@ -13,11 +14,13 @@
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
-    width: 1200px;
+    width: 80%;
+    margin: auto;
   }
 
   .stats-content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 
@@ -26,10 +29,12 @@
     background: linear-gradient(to right, $primary, $secondary);
     padding: 2rem;
 
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
+    // @media (max-width: 768px) {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   justify-content: center;
+    // }
   }
 
   .stat-item {

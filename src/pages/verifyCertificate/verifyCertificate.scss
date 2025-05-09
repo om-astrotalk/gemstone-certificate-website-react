@@ -1,0 +1,220 @@
+.verify-section {
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+  
+      h2 {
+        font-size: 2.5rem;
+        background: linear-gradient(to right, #6b46c1, #9f7aea);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      }
+  
+      p {
+        max-width: 600px;
+        margin: 0 auto;
+        color: #666;
+        font-size: 1.1rem;
+      }
+    }
+  
+    .verify-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+  
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  
+    .image-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+  
+      .circle-container {
+        width: 18rem;
+        height: 18rem;
+        background: linear-gradient(135deg, #6b46c1cc, #9f7aeacc);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        .circle-inner {
+          width: 16rem;
+          height: 16rem;
+          background: rgba(255, 255, 255, 0.95);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+          text-align: center;
+        }
+  
+        .image-wrapper {
+          position: relative;
+  
+          img {
+            width: 12rem;
+            height: 12rem;
+            object-fit: contain;
+          }
+  
+          .badge {
+            position: absolute;
+            bottom: -1rem;
+            right: -1.25rem;
+            background: #6b46c1;
+            color: #fff;
+            padding: 0.4rem 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            animation: pulse 2s infinite;
+          }
+        }
+  
+        .status {
+          .icon {
+            font-size: 3rem;
+            margin-bottom: 0.75rem;
+          }
+  
+          h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+  
+          p {
+            font-size: 0.875rem;
+            color: #666;
+          }
+  
+          &.success .icon {
+            color: green;
+          }
+  
+          &.error .icon {
+            color: #e53e3e;
+          }
+        }
+      }
+  
+      .verified-stamp {
+        position: absolute;
+        bottom: -1rem;
+        right: -1rem;
+        width: 4rem;
+        height: 4rem;
+        background: green;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: bold;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(12deg);
+        border: 2px solid white;
+      }
+    }
+  
+    .form-box {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+  
+      .form-header {
+        margin-bottom: 1.5rem;
+  
+        .lab-badge {
+          display: inline-block;
+          background: rgba(107, 70, 193, 0.15);
+          color: #6b46c1;
+          padding: 0.3rem 0.75rem;
+          font-weight: 600;
+          font-size: 0.85rem;
+          border-radius: 0.4rem;
+          margin-bottom: 0.75rem;
+        }
+  
+        h3 {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+  
+        p {
+          color: #666;
+          font-size: 0.875rem;
+          margin-top: 0.25rem;
+        }
+      }
+  
+      form {
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1rem;
+  
+          label {
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+          }
+  
+          input {
+            padding: 0.6rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.4rem;
+          }
+  
+          .error {
+            color: #e53e3e;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+          }
+        }
+  
+        button {
+          width: 100%;
+          margin-top: 1rem;
+          padding: 0.75rem;
+          border: none;
+          border-radius: 0.4rem;
+          background: linear-gradient(to right, #6b46c1, #9f7aea);
+          color: white;
+          font-weight: bold;
+          font-size: 1rem;
+          cursor: pointer;
+  
+          &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  

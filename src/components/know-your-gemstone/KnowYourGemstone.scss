@@ -8,7 +8,6 @@
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1rem;
 
   .premium {
     background-image: linear-gradient(to bottom right, $primary, $secondary);
@@ -21,7 +20,6 @@
     font-size: 16px;
     text-transform: uppercase;
     display: inline-block;
-    
   }
 
   .main-heading {
@@ -43,32 +41,34 @@
   }
 
   .gemstone-carousel {
-      max-width: 99%;
+    
+    max-width: 99%;
+
     .slick-slide {
       padding: 20px 10px;
       box-sizing: border-box;
     }
 
     .slick-dots {
-        bottom: -30px;
-      
-        li {
-          button {
-            &::before {
-              font-size: 10px;
-              color: #ccc; // default inactive color
-              opacity: 1;
-            }
-          }
-      
-          &.slick-active button::before {
-            color: transparent;
-            background: linear-gradient(to bottom right, $secondary, #b14de6);
-            -webkit-background-clip: text;
-            background-clip: text;
+      bottom: -30px;
+
+      li {
+        button {
+          &::before {
+            font-size: 10px;
+            color: #ccc;
+            opacity: 1;
           }
         }
+
+        &.slick-active button::before {
+          color: transparent;
+          background: linear-gradient(to bottom right, $secondary, #b14de6);
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
       }
+    }
   }
 
   .gemstone-card {
@@ -83,7 +83,8 @@
     text-align: center;
     transition: transform 0.3s ease;
     width: 300px !important;
-    height: 450px;
+    height: 450px !important;
+    margin: auto;
 
     &:hover {
       transform: translateY(-5px);
@@ -91,15 +92,12 @@
 
     .gemstone-img {
       width: 150px;
-      
       object-fit: contain;
-      
     }
 
     .gemstone-title {
       font-size: 1.25rem;
       font-weight: 600;
-      
     }
 
     .gemstone-desc {
@@ -122,6 +120,75 @@
         background: $primary;
         color: #fff;
       }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 1024px) {
+    .main-heading {
+      font-size: 2rem;
+    }
+
+    .gemstone-card {
+      width: 260px !important;
+      height: auto;
+      padding: 1rem;
+
+      .gemstone-img {
+        width: 120px;
+      }
+
+      .gemstone-desc {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+
+    .main-heading {
+      font-size: 1.75rem;
+    }
+
+    .gemstone-card {
+      width: 240px !important;
+
+      .gemstone-title {
+        font-size: 1.1rem;
+      }
+
+      .gemstone-img {
+        width: 110px;
+      }
+
+      .gemstone-desc {
+        font-size: 12.5px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .main-heading {
+      font-size: 1.5rem;
+    }
+
+    .gemstone-card {
+      width: 90% !important;
+      margin: 0 auto;
+      height: auto;
+
+      .gemstone-img {
+        width: 100px;
+      }
+
+      .gemstone-desc {
+        font-size: 12px;
+      }
+    }
+
+    .slick-dots {
+      bottom: -20px;
     }
   }
 }

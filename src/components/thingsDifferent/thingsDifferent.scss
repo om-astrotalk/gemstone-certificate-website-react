@@ -12,6 +12,7 @@
   .image-section {
     flex: 1;
     padding-left: 55px;
+
     img {
       width: 100%;
       height: auto;
@@ -50,8 +51,7 @@
         -webkit-background-clip: text;
         color: transparent;
         -webkit-text-fill-color: transparent;
-      
-        display: inline-block; // enforce tighter layout
+        display: inline-block;
       }
     }
 
@@ -65,7 +65,7 @@
     .bullet-points {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 10px;
       margin-top: 10px;
 
       .bullet-item {
@@ -90,6 +90,76 @@
           font-size: 0.95rem;
           color: #56648f;
           line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  // Responsive Styles
+  @media screen and (max-width: 1024px) {
+    .content-section {
+      padding: 40px 30px;
+
+      .main-heading {
+        font-size: 2rem;
+      }
+
+      .subheading {
+        font-size: 0.95rem;
+      }
+
+      .bullet-points .bullet-item {
+        .bullet-title {
+          font-size: 1.1rem;
+        }
+
+        .bullet-description {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+
+    .image-section {
+      padding: 0;
+
+      img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    .content-section {
+      padding: 30px 10px;
+      align-items: center;
+      text-align: center;
+
+      .main-heading {
+        font-size: 1.75rem;
+      }
+
+      .subheading {
+        font-size: 0.95rem;
+      }
+
+      .bullet-points {
+        align-items: flex-start;
+
+        .bullet-item {
+          .bullet-title {
+            justify-content: center;
+            font-size: 1rem;
+          }
+
+          .bullet-description {
+            text-align: center;
+            font-size: 0.9rem;
+          }
         }
       }
     }

@@ -1,0 +1,112 @@
+@import "../../styles/theme";
+@import"../../styles/main.scss";
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  
+    .contact-left {
+      flex: 1;
+      min-width: 300px;
+  
+      h2 {
+        font-size: 2rem;
+        color: #4b006e;
+        margin-bottom: 1rem;
+      }
+  
+      h3 {
+        font-size: 1.5rem;
+        color: #4b006e;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        margin-bottom: 1.5rem;
+        color: #555;
+        line-height: 1.6;
+      }
+      .contact-item-wrapper{
+        display: flex;
+         align-items: start;
+         max-width: 500px;
+         justify-content: space-between;
+       
+      .contact-item {
+        display: flex;
+       
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+  
+        .icon {
+          font-size: 1.5rem;
+          color: $primary;
+         
+        }
+  
+        strong {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 600;
+         
+          color: #4b006e;
+        }
+  
+        span {
+          margin-left: 35px;
+          color: #444;
+        }
+      }
+    }
+    }
+  
+    .contact-right {
+      flex: 1;
+      min-width: 300px;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+    .contact-item-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .contact-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      .contact-left, .contact-right {
+        width: 100%;
+      }
+  
+      .contact-left .contact-item {
+        justify-content: center;
+        text-align: left;
+      }
+    }
+  }
+  

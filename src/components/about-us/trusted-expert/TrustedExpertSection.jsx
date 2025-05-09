@@ -24,9 +24,9 @@ const TrustedExpertSection = () => {
             <p className="section-paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quae, alias obcaecati accusamus at sed.
             </p>
-            <div className="custom-outline-button ">
+            {/* <div className="custom-outline-button ">
              Contact Our Experts
-            </div>
+            </div> */}
           </div>
           <div className="image-wrapper">
             <div className="image-gradient"></div>
